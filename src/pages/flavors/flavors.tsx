@@ -1,5 +1,5 @@
-import React from 'react';
-import { View, Text, TouchableOpacity } from 'react-native';
+import React, { useState } from 'react';
+import { View, Text, TouchableOpacity, Button } from 'react-native';
 import { styles } from '../../components/styles/styles'
 import { ScrollView } from 'react-native-gesture-handler';
 import { Card } from '../../components/cards/flavors.cards/cards';
@@ -7,12 +7,22 @@ import { Card } from '../../components/cards/flavors.cards/cards';
 export default function Flavors({navigation, route}) {
 
     const sizeSelected = route.params?.Tamanho
+    const priceSelected = route.params?.Preco
 
-    const next = (size) => navigation.navigate("carrinho", {size: size})
-  
-    function nextCart(){
-      console.log(sizeSelected)
-      next(sizeSelected)
+    const calabresa = "Calabresa"
+    const tradicional = "Tradicional"
+    const quatroqueijos = "Quatro Queijos"
+    const camarao = "Camarão"
+    const marguerita = "Marguerita"
+    const frangocatupiry = "Frango / Catupiry"
+    const portuguesa = "Portuguesa"
+    const strogonof = "Strogonof"
+
+    const next = (size, price, flavor) => navigation.navigate("carrinho", {size: size, price: price, flavor: flavor})
+    
+    function flavCalabresa(){
+    next(sizeSelected,priceSelected,calabresa)
+      console.log("O Tamanho escolhido foi: " + sizeSelected + " Custa R$" + priceSelected + " Sabor de: " + calabresa)
     }
 
     return (
@@ -26,18 +36,18 @@ export default function Flavors({navigation, route}) {
             
               <TouchableOpacity 
               style={styles.mainContainer}
-              onPress={nextCart}>
+              onPress={flavCalabresa}>
               <Card
-              title={'Calabresa'}
+              title={calabresa}
               image={require('../../components/cards/flavors.cards/images/calabresa.png')}
               />
               </TouchableOpacity>
 
               <TouchableOpacity 
               style={styles.mainContainer}
-              onPress={() => navigation.navigate('')}>
+              onPress={flavCalabresa}>
                 <Card
-                title={'Tradicional'}
+                title={tradicional}
                 image={require('../../components/cards/flavors.cards/images/tradicional.jpg')}
                 />
               </TouchableOpacity>
@@ -47,7 +57,7 @@ export default function Flavors({navigation, route}) {
               onPress={() => navigation.navigate('')}
               >
                 <Card
-                title={'Quatro Queijos'}
+                title={quatroqueijos}
                 image={require('../../components/cards/flavors.cards/images/4queijos.png')}
                 />
               </TouchableOpacity>
@@ -56,7 +66,7 @@ export default function Flavors({navigation, route}) {
               style={styles.mainContainer}
               onPress={() => navigation.navigate('')}>
                 <Card
-                title={'Camarão'}
+                title={camarao}
                 image={require('../../components/cards/flavors.cards/images/camarao.png')}
                 />
               </TouchableOpacity>
@@ -65,7 +75,7 @@ export default function Flavors({navigation, route}) {
               style={styles.mainContainer}
               onPress={() => navigation.navigate('')}>
                 <Card
-                title={'Marguerita'}
+                title={marguerita}
                 image={require('../../components/cards/flavors.cards/images/marguerita.png')}
                 />
               </TouchableOpacity>
@@ -74,7 +84,7 @@ export default function Flavors({navigation, route}) {
               style={styles.mainContainer}
               onPress={() => navigation.navigate('')}>
                 <Card
-                title={'Frango / Catupiry'}
+                title={frangocatupiry}
                 image={require('../../components/cards/flavors.cards/images/frangocomcatupiry.png')}
                 />
               </TouchableOpacity>
@@ -83,7 +93,7 @@ export default function Flavors({navigation, route}) {
               style={styles.mainContainer}
               onPress={() => navigation.navigate('')}>
                 <Card
-                title={'Portuguesa'}
+                title={portuguesa}
                 image={require('../../components/cards/flavors.cards/images/portuguesa.png')}
                 />
               </TouchableOpacity>
@@ -92,7 +102,7 @@ export default function Flavors({navigation, route}) {
               style={styles.mainContainer}
               onPress={() => navigation.navigate('')}>
                 <Card
-                title={'Strogonof'}
+                title={strogonof}
                 image={require('../../components/cards/flavors.cards/images/strogonof.png')}
                 />
               </TouchableOpacity>

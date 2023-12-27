@@ -1,8 +1,9 @@
-import React from "react";
+import React,{useState} from "react";
 import { View, Text, Button } from "react-native";
 import { styles } from '../../components/styles/styles'
 
 export default function Cart({route}){
+
     return(
       <View style={{flex:1, backgroundColor:"#D6D6D6", alignItems:"center"}}>
         <View style={styles.top_bar}>
@@ -16,6 +17,6 @@ export default function Cart({route}){
             console.log(route.params?.size)
           }}/>
         </View>
-      </View>
+      </View>  
     )
 }
