@@ -1,9 +1,9 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { Ionicons } from '@expo/vector-icons'
-import Home  from '../pages/home/home'
 import Size  from '../pages/size/size';
 import Flavors  from '../pages/flavors/flavors'
 import Cart  from '../pages/cart/cart';
+import StackRoutes from './stack.routes';
 
 const Tab = createBottomTabNavigator();
 
@@ -11,11 +11,10 @@ export default function TabRoutes(){
 
     return(
     
-        <Tab.Navigator initialRouteName='home'>
-
-            <Tab.Screen
-            name="home"
-            component={Home}
+        <Tab.Navigator >
+            <Tab.Screen 
+            name="first"
+            component={StackRoutes}
             options={{
                 tabBarShowLabel: false,
                 headerShown: false,
@@ -30,7 +29,7 @@ export default function TabRoutes(){
         }
         />
             <Tab.Screen
-            name="size"
+            name="tamanho"
             component={Size}
             options={{
                 tabBarShowLabel: false,
@@ -46,7 +45,7 @@ export default function TabRoutes(){
         }
         />
             <Tab.Screen
-            name="flavors"
+            name="sabores"
             component={Flavors}
             options={{
                 tabBarShowLabel: false,
@@ -62,7 +61,7 @@ export default function TabRoutes(){
         }
         />
             <Tab.Screen
-            name="cart"
+            name="carrinho"
             component={Cart}
             options={{
                 tabBarShowLabel: false,
@@ -76,9 +75,7 @@ export default function TabRoutes(){
                 }
             }
         }
-        />
-                   
+        />       
         </Tab.Navigator>
-
-    )
+)
 }

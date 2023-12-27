@@ -7,7 +7,8 @@ const Drawer = createDrawerNavigator();
 export default function DrawerRoutes(){
 
        return(
-            <Drawer.Navigator screenOptions={{
+            <Drawer.Navigator
+            screenOptions={{
                 drawerStyle:{
                     borderTopRightRadius:50,
                     borderBottomRightRadius:50,
@@ -16,33 +17,36 @@ export default function DrawerRoutes(){
                 drawerType:'front'
             }}>
                 <Drawer.Screen
-                    name='inicio'
+                    name='Initial'
                     component={TabRoutes}
                     options={{
-                        drawerIcon: () => <Ionicons size={40} color={'#EB8806'} name='home-outline'/>,
+                        drawerIcon: () => <Ionicons size={25} color={'#EB8806'} name='home-outline'/>,
                         drawerItemStyle:{
                             marginTop:60
                         },
                         drawerLabel: 'Home',
                         drawerLabelStyle:{
                             fontSize:20,
-                            fontWeight:'bold',
+                            fontWeight:'normal',
                             color:"#EB8806"
                         },
-                        title:'',
+                        title:'Menu',
+                        headerTitleStyle:{
+                            marginLeft:-10,
+                        },
                         headerTransparent:true,
                         headerTintColor:"#FFF",
                     }}
                 />
                 <Drawer.Screen
-                    name='endereco'
+                    name='Flavors'
                     component={TabRoutes}
                     options={{
-                        drawerIcon: () => <Ionicons size={40} color={'#EB8806'} name='map-outline'/>,
+                        drawerIcon: () => <Ionicons size={25} color={'#EB8806'} name='map-outline'/>,
                         drawerLabel: 'Meu Endereço',
                         drawerLabelStyle:{
                             fontSize:20,
-                            fontWeight:'bold',
+                            fontWeight:'normal',
                             color:"#EB8806",
                         },
                         title:'',
@@ -54,11 +58,11 @@ export default function DrawerRoutes(){
                     name='promocoes'
                     component={TabRoutes}
                     options={{
-                        drawerIcon: () => <Ionicons size={40} color={'#EB8806'} name='ribbon-outline'/>,
+                        drawerIcon: () => <Ionicons size={25} color={'#EB8806'} name='ribbon-outline'/>,
                         drawerLabel: 'Promoções',
                         drawerLabelStyle:{
                             fontSize:20,
-                            fontWeight:'bold',
+                            fontWeight:'normal',
                             color:"#EB8806",
                         },
                         title:'',

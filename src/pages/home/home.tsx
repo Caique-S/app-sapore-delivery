@@ -3,9 +3,18 @@ import { Text, View , TouchableOpacity} from 'react-native';
 import  { styles }  from '../../components/styles/styles'
 import { Ionicons } from '@expo/vector-icons'
 import { Card } from '../../components/cards/home_cards/cards';
+import StackRoutes from '../../routes/stack.routes';
+import TabRoutes from '../../routes/tab.routes';
 
 
-export default function Home() {
+export default function Home({navigation}) {
+
+  const avant = () => navigation.navigate('tamanho')
+
+  function prox(){
+    avant();
+    console.log("Mudou de pagina")
+  }
 
     return (
             <View style={{flex:1, backgroundColor:"#D6D6D6", alignItems:"center"}}>
@@ -24,13 +33,14 @@ export default function Home() {
                   </TouchableOpacity>
   
                 </View>
-
-                <Card 
+                <TouchableOpacity onPress={prox}>
+                <Card
                 title={"Pizzas"} 
                 description={"Mais de 30 sabores de pizza em até 4 tamanhos diferentes de fome."} 
                 timelapse={" 30 mins"}
                 image={require("../../components/cards/home_cards/images/wepi.png")}
                 />
+                </TouchableOpacity>
                 <Card
                 title={"Bebidas não-alcoólicas"}
                 description={"Refrigerantes, Sucos, Energéticos e Água."}

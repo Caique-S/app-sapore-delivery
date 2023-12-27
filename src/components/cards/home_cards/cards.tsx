@@ -1,10 +1,10 @@
 import React from "react";
-import { View, Text, TouchableOpacity, StyleSheet, Image } from "react-native";
+import { View, Text, TouchableOpacity, StyleSheet, Image, Button } from "react-native";
 import { Ionicons } from '@expo/vector-icons'
 
-export function Card({title, description, timelapse,image}){
+export function Card({title, description, timelapse,image }){
     return(
-        <TouchableOpacity style={styles.card}> 
+        <View style={styles.card}> 
             <View style={styles.incardleft}>
                 <Image 
                 source={image}
@@ -19,7 +19,7 @@ export function Card({title, description, timelapse,image}){
                     <Text style={{fontSize:15,color:"#999999"}}>{timelapse}</Text>
                 </View>
             </View>
-        </TouchableOpacity>
+        </View>
     )
 }
 
