@@ -3,20 +3,26 @@ import { View, Text, TouchableOpacity, StyleSheet, Image, Button } from "react-n
 import { Ionicons } from '@expo/vector-icons'
 
 export function Card({title, description, timelapse,image }){
+
+    const cardPizzasTitle = title
+    const cardPizzasImage = image
+    const cardPizzasTime = timelapse
+    const cardPizzasDescripition = description
+
     return(
         <View style={styles.card}> 
             <View style={styles.incardleft}>
                 <Image 
-                source={image}
+                source={cardPizzasImage}
                 style={styles.picture}
                 />
             </View>
             <View style={styles.incardright}>
-                <Text style={styles.titlecard}>{title}</Text>
-                <Text style={styles.textcard}>{description}</Text>
+                <Text style={styles.titlecard}>{cardPizzasTitle}</Text>
+                <Text style={styles.textcard}>{cardPizzasDescripition}</Text>
                 <View style={{height:"20%", flexDirection:"row",alignItems:"flex-end"}}>
                     <Ionicons size={20} color={'#999999'} name='alarm-outline'/>
-                    <Text style={{fontSize:15,color:"#999999"}}>{timelapse}</Text>
+                    <Text style={{fontSize:15,color:"#999999"}}>{cardPizzasTime}</Text>
                 </View>
             </View>
         </View>

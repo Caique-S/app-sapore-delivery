@@ -1,13 +1,12 @@
 import React from 'react';
-import { Text, View , TouchableOpacity} from 'react-native';
-import  { styles }  from '../../components/styles/styles'
+import { Text, View , TouchableOpacity , StyleSheet } from 'react-native';
 import { Ionicons } from '@expo/vector-icons'
 import { Card } from '../../components/cards/home_cards/cards';
-import StackRoutes from '../../routes/stack.routes';
-import TabRoutes from '../../routes/tab.routes';
-
+import { styles } from '../../components/styles/styles';
 
 export default function Home({navigation}) {
+
+
 
   const avant = () => navigation.navigate('tamanho')
 
@@ -46,7 +45,7 @@ export default function Home({navigation}) {
                 description={"Refrigerantes, Sucos, Energéticos e Água."}
                 timelapse={" 5 mins"}
                 image={require("../../components/cards/home_cards/images/refri.jpg")}
-                />
+                /> 
             </View>
     );
   }

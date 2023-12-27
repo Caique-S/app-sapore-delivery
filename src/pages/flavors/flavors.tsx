@@ -4,7 +4,16 @@ import { styles } from '../../components/styles/styles'
 import { ScrollView } from 'react-native-gesture-handler';
 import { Card } from '../../components/cards/flavors.cards/cards';
 
-export default function Flavors({navigation}) {
+export default function Flavors({navigation, route}) {
+
+    const sizeSelected = route.params?.Tamanho
+
+    const next = (size) => navigation.navigate("carrinho", {size: size})
+  
+    function nextCart(){
+      console.log(sizeSelected)
+      next(sizeSelected)
+    }
 
     return (
       <View style={{flex:1, backgroundColor:"#D6D6D6", alignItems:"center"}}>
@@ -17,7 +26,7 @@ export default function Flavors({navigation}) {
             
               <TouchableOpacity 
               style={styles.mainContainer}
-              onPress={() => navigation.navigate('')}>
+              onPress={nextCart}>
               <Card
               title={'Calabresa'}
               image={require('../../components/cards/flavors.cards/images/calabresa.png')}
