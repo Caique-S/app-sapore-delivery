@@ -1,6 +1,7 @@
 import { createDrawerNavigator } from '@react-navigation/drawer'
 import { Ionicons } from '@expo/vector-icons'
 import  TabRoutes  from './tab.routes' 
+import Historico from '../components/screens/historico';
 
 const Drawer = createDrawerNavigator();
 

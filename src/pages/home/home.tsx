@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View , TouchableOpacity , StyleSheet } from 'react-native';
+import { Text, View , TouchableOpacity } from 'react-native';
 import { Ionicons } from '@expo/vector-icons'
 import { Card } from '../../components/cards/home_cards/cards';
 import { styles } from '../../components/styles/styles';
@@ -19,7 +19,9 @@ export default function Home({navigation}) {
             <View style={{flex:1, backgroundColor:"#D6D6D6", alignItems:"center"}}>
   
                 <View style={styles.top_bar}>
-                  <TouchableOpacity style={styles.historic}>
+                  <TouchableOpacity
+                  onPress={() => navigation.navigate("historic")}
+                  style={styles.historic}>
                     <Ionicons size={30} color={'#FFF'} name='md-timer-outline'/>
                   </TouchableOpacity>
   
@@ -27,7 +29,9 @@ export default function Home({navigation}) {
                     Pizzaria Sapore D'Amores
                   </Text>
   
-                  <TouchableOpacity style={styles.shopping}>
+                  <TouchableOpacity
+                  onPress={() => navigation.navigate('carrinho')} 
+                  style={styles.shopping}>
                     <Ionicons size={30} color={'#FFF'} name='basket-outline'/>
                   </TouchableOpacity>
   

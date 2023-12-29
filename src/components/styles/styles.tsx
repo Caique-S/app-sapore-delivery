@@ -1,5 +1,6 @@
 import { StyleSheet } from "react-native"
 
+
 export const styles = StyleSheet.create({
     top_bar:{
         flexDirection:'row',
@@ -50,6 +51,21 @@ export const styles = StyleSheet.create({
         fontWeight:"bold",
         color:"#FFF",
         padding:5,
+    },
+    title_logo_cart:{
+        flexDirection:'row',
+        paddingLeft:30,
+        paddingRight:30,
+        fontSize:22,
+        fontWeight:"bold",
+        color:"#FFF",
+        padding:5,
+        textAlign:'center',
+        width:350
+   
+    },
+    cartCash:{
+        paddingLeft:150,
     },
     shopping:{
 
@@ -113,4 +129,141 @@ export const styles = StyleSheet.create({
         height:'70%',  
         alignItems:'center',
     },
+    formEndereco:{
+        marginTop:-40,
+        marginBottom:20,
+        width:350,
+        height:300,
+        flexDirection:"row",
+        flexWrap:"wrap",
+        alignContent:"space-between",
+        justifyContent:"space-between",
+    },
+    inputObservation:{
+        height:130,
+        width: 350,
+        borderRadius:10,
+        backgroundColor: "#FFF",
+        textAlign:"left",
+        textAlignVertical:"top",
+        padding:10,
+        shadowColor:'#000',
+        elevation: 5,
+        fontSize:20,
+        color:"#999999"
+    },
+    inputCep:{
+        height:50,
+        width: 170,
+        borderRadius:10,
+        backgroundColor: "#FFF",
+        textAlign:"left",
+        textAlignVertical:"top",
+        padding:10,
+        shadowColor:'#000',
+        elevation: 5,
+        fontSize:20,
+        color:"#999999"
+    },
+    inputBairro:{
+        height:50,
+        width: 160,
+        borderRadius:10,
+        backgroundColor: "#FFF",
+        textAlign:"left",
+        textAlignVertical:"top",
+        padding:10,
+        shadowColor:'#000',
+        elevation: 5,
+        fontSize:20,
+        color:"#999999"
+    },
+    inputEndereco:{
+        height:50,
+        width: 350,
+        borderRadius:10,
+        backgroundColor: "#FFF",
+        textAlign:"left",
+        textAlignVertical:"top",
+        padding:10,
+        shadowColor:'#000',
+        elevation: 5,
+        fontSize:20,
+        color:"#999999"
+    },
+    inputNumero:{
+        height:50,
+        width: 100,
+        borderRadius:10,
+        backgroundColor: "#FFF",
+        textAlign:"left",
+        textAlignVertical:"top",
+        padding:10,
+        shadowColor:'#000',
+        elevation: 5,
+        fontSize:20,
+        color:"#999999"
+    },
+    inputComplemento:{
+        height:50,
+        width: 230,
+        borderRadius:10,
+        backgroundColor: "#FFF",
+        textAlign:"left",
+        textAlignVertical:"top",
+        padding:10,
+        shadowColor:'#000',
+        elevation: 5,
+        fontSize:20,
+        color:"#999999"
+    },
+    radioOptions:{
+        flexDirection:'row',
+        justifyContent:'space-around',
+        width:300,
+        marginBottom:10,
+    },
+    radioEntrega:{
+        flexDirection:'row',
+        justifyContent:'center',
+        alignItems:'center',
+        width:150,
+        backgroundColor:'#FFF',
+        borderRadius:15,
+    },
+    radioRetirada:{
+        flexDirection:'row',
+        justifyContent:'center',
+        alignItems:'center',
+        width:150,
+        backgroundColor:'#FFF',
+        borderRadius:15,
+    },
+    pedidoTrue:{
+
+    },
+    item1:{
+
+    },
+    item2:{
+
+    },
+    item3:{
+
+    },
+    item4:{
+
+    },
+    item5:{
+
+    },
+    item6:{
+
+    },
+    item7:{
+
+    },
+    item8:{
+
+    }
 })
